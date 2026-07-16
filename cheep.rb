@@ -5,13 +5,13 @@
 class Cheep < Formula
   desc "The most results per dollar: a smart orchestrator coordinates cheap/local executor agents."
   homepage "https://tedhaley.ca/cheep/"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TedHaley/cheep/releases/download/v0.5.1/cheep_darwin_amd64.tar.gz"
-      sha256 "de3389570776315e251f5f7a05aeda26e400076c80a090a816d64a88d35cd33c"
+      url "https://github.com/TedHaley/cheep/releases/download/v0.5.2/cheep_darwin_amd64.tar.gz"
+      sha256 "8baa5ad782fca48b5c3e4aa6ff94c8dce01a8fe534d9057bda2a57fd2a894052"
 
       define_method(:install) do
         bin.install "cheep"
@@ -19,8 +19,8 @@ class Cheep < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TedHaley/cheep/releases/download/v0.5.1/cheep_darwin_arm64.tar.gz"
-      sha256 "75d557845b9d010bb36881c6127b541622300a3585819d31bca95cd7792f5d59"
+      url "https://github.com/TedHaley/cheep/releases/download/v0.5.2/cheep_darwin_arm64.tar.gz"
+      sha256 "0da5b470c3fe6e7f56147c3130644cc38f33435549de65a88f08822f059da14b"
 
       define_method(:install) do
         bin.install "cheep"
@@ -31,16 +31,16 @@ class Cheep < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TedHaley/cheep/releases/download/v0.5.1/cheep_linux_amd64.tar.gz"
-      sha256 "9e1b1297d52d25a9a832cc8ef06e771bf370fcb240e86b39da1512a26379aca8"
+      url "https://github.com/TedHaley/cheep/releases/download/v0.5.2/cheep_linux_amd64.tar.gz"
+      sha256 "4a23260af0b2bc1f1cc8b5b6246e61aa196cd35a21648370fb99796cb8d061bb"
       define_method(:install) do
         bin.install "cheep"
         bin.install "cheep-claude-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TedHaley/cheep/releases/download/v0.5.1/cheep_linux_arm64.tar.gz"
-      sha256 "704c2790f700a148a69bb7db043a51c56a50539892cc13b547c82edd7571a130"
+      url "https://github.com/TedHaley/cheep/releases/download/v0.5.2/cheep_linux_arm64.tar.gz"
+      sha256 "268fb743feba72c18ff0558b09abd4ac049be0901981afbeba0839e9449d807f"
       define_method(:install) do
         bin.install "cheep"
         bin.install "cheep-claude-mcp"
